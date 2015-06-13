@@ -8,10 +8,12 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.view.View;
 import android.view.Menu;
-import android.view.MenuItem;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private static Toast mToast;
+    private static int mShortToast = Toast.LENGTH_SHORT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,37 +28,33 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     /**
      * This method is called when the buttons are clicked.
      */
     public void showMessage(View view) {
         Button button = (Button) view;
-        showToastMessage("This button will launch my "+button.getText()+" app!");
+        showToastMessage("This button will launch my " + button.getText() + " app!");
     }
 
     /**
      * This method displays a toast message with the given string.
      */
     private void showToastMessage(String msgText) {
+        hideExistingToastMessage(mToast);
         Context context = getApplicationContext();
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, msgText, duration);
-        toast.setGravity(Gravity.BOTTOM,0,0);
-        toast.show();
+        mToast = Toast.makeText(context, msgText, mShortToast);
+        mToast.setGravity(Gravity.BOTTOM,0,0);
+        mToast.show();
+    }
+
+    /**
+     * This method erases the currently visible toast message.
+     * This is useful when we need to erase the currently showing toast message
+     * if the user has pressed two or more buttons in quick succession.
+     */
+    private void hideExistingToastMessage(Toast toast) {
+        if (toast != null) {
+            toast.cancel();
+        }
     }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="black" type="color">#000</item>
+    <item name="white" type="color">#fff</item>
+    <item name="lightCoralCustom" type="color">#F08C35</item>
+    <item name="deepOrangeCustom" type="color">#BF360C</item>
+</resources>

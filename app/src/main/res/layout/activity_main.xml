@@ -12,18 +12,17 @@
 
     <TextView
         android:text="@string/app_title"
-        android:textColor="#000"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/defaultTextSize"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:id="@+id/textView" />
+        android:layout_height="@dimen/layoutHeight"
+        android:layout_marginBottom="@dimen/layoutMarginBottom"
+        android:gravity="center"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:background="#BBDEFB"
-        android:layout_width="200dp"
+        android:layout_width="@dimen/layoutWidth"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
@@ -31,39 +30,33 @@
 
         <Button
             style="@style/ButtonStyles"
-            android:text="@string/app_streamer_title"
-            android:id="@+id/buttonView01"
-            android:onClick="showMessage"/>
+            android:text="@string/app_streamer"
+            android:id="@+id/app_streamer"/>
 
         <Button
             style="@style/ButtonStyles"
-            android:text="@string/app_football_title"
-            android:id="@+id/buttonView02"
-            android:onClick="showMessage"/>
+            android:text="@string/app_football"
+            android:id="@+id/app_football"/>
 
         <Button
             style="@style/ButtonStyles"
-            android:text="@string/app_library_title"
-            android:id="@+id/buttonView03"
-            android:onClick="showMessage"/>
+            android:text="@string/app_library"
+            android:id="@+id/app_library"/>
 
         <Button
             style="@style/ButtonStyles"
-            android:text="@string/app_build_it_bigger_title"
-            android:id="@+id/buttonView04"
-            android:onClick="showMessage"/>
+            android:text="@string/app_build_it_bigger"
+            android:id="@+id/app_build_it_bigger"/>
 
         <Button
             style="@style/ButtonStyles"
-            android:text="@string/app_reader_title"
-            android:id="@+id/buttonView05"
-            android:onClick="showMessage"/>
+            android:text="@string/app_reader"
+            android:id="@+id/app_reader"/>
 
         <Button
             style="@style/ButtonStyles.OrangeButtonStyles"
-            android:text="@string/app_capstone_title"
-            android:id="@+id/buttonView06"
-            android:onClick="showMessage"/>
+            android:text="@string/app_capstone"
+            android:id="@+id/app_capstone"/>
 
     </LinearLayout>
 

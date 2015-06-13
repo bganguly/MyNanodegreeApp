@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">My App Portfolio</string>
     <string name="app_title">My Nanodegree Apps !</string>
-    <string name="app_streamer_title">Spotify Streamer</string>
-    <string name="app_football_title">Football Scores</string>
-    <string name="app_library_title">Library</string>
-    <string name="app_build_it_bigger_title">Build It Bigger</string>
-    <string name="app_reader_title">XYZ Reader</string>
-    <string name="app_capstone_title">Capstone</string>
+    <string name="app_streamer">Spotify Streamer</string>
+    <string name="app_football">Football Scores</string>
+    <string name="app_library">Library</string>
+    <string name="app_build_it_bigger">Build It Bigger</string>
+    <string name="app_reader">XYZ Reader</string>
+    <string name="app_capstone">Capstone</string>
     <string name="action_settings">Settings</string>
 </resources>
